@@ -17,7 +17,7 @@
   "dependencies": {
     "@angular/animations": "20.0.2",
     "@angular/cdk": "20.0.2",
-    "@angular/common": "22.1.1",
+    "@angular/common": "20.0.2",
     "@angular/compiler": "20.3.28",
     "@angular/core": "20.3.28",
     "@angular/forms": "20.0.2",
@@ -32,7 +32,7 @@
     "zone.js": "~0.15.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^22.2.5",
+    "@angular-devkit/build-angular": "20.0.1",
     "@angular-eslint/builder": "20.0.0",
     "@angular-eslint/eslint-plugin": "20.0.0",
     "@angular-eslint/eslint-plugin-template": "20.0.0",
@@ -54,5 +54,11 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "prettier": "^3.5.3",
     "typescript": "5.8.3"
+  },
+  "overrides": {
+    "@angular/common": "$@angular/common",
+    "@angular/core": "$@angular/core",
+    "@angular/compiler": "$@angular/compiler",
+    "@angular/platform-browser": "$@angular/platform-browser"
   }
 }

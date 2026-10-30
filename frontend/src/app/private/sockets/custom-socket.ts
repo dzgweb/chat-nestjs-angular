@@ -1,10 +1,10 @@
 import { Socket, SocketIoConfig } from "ngx-socket-io";
 import { tokenGetter } from "../../app.module";
-import { Injectable } from "@angular/core";
+import { ApplicationRef, Injectable } from "@angular/core";
 
 @Injectable({providedIn: 'root'})
 export class CustomSocket extends Socket {
-  constructor() {
+  constructor(appRef: ApplicationRef) {
     const config: SocketIoConfig = {
       url: 'http://localhost:3000',
       options: {
@@ -13,7 +13,7 @@ export class CustomSocket extends Socket {
         }
       }
     };
-    super(config);
+    super(config, appRef);
   }
 
   reconnect() {
